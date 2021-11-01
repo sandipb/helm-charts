@@ -1,7 +1,9 @@
 on:
-  push:
-    branches:
-      - 'main'
+  workflow_run:
+    workflows: ["Release Charts"]
+    types:
+      - completed
+    branches: [main]
     paths:
       - 'README.md'
 jobs:
