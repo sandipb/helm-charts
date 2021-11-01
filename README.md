@@ -14,7 +14,7 @@ helm repo add sandipb https://sandipb.github.io/helm-charts
 
 ## Charts
 
-- [cert-manager-ca-issuer](charts/cert-manager-ca-issuer): Add a private CA authority to cert-manager.
+- [cert-manager-ca-issuer](https://github.com/sandipb/helm-charts/tree/main/charts/cert-manager-ca-issuer): Add a private CA authority to cert-manager.
 
 ## License
 
