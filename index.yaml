@@ -3,6 +3,20 @@ entries:
   cert-manager-ca-issuer:
   - apiVersion: v2
     appVersion: 1.6.0
+    created: "2021-11-01T23:50:36.07805001Z"
+    description: A Helm chart for adding a custom CA issuer for cert-manager
+    digest: 6c1c5c15c4a09797c6802cf2cc8cfa3c815cd6258abaa34bae52814217e36395
+    home: https://blog.sandipb.net
+    maintainers:
+    - email: sandipb@showmethesource.org
+      name: Sandip Bhattacharya
+    name: cert-manager-ca-issuer
+    type: application
+    urls:
+    - https://github.com/sandipb/helm-charts/releases/download/cert-manager-ca-issuer-0.1.1/cert-manager-ca-issuer-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.6.0
     created: "2021-11-01T23:43:12.926037597Z"
     description: A Helm chart for adding a CA issuer for cert-manager
     digest: 9ca75c95d2a383b3da4d41aa0fbd6e07f1b66c7006a9d47ef2d9f0e9c2176127
@@ -15,4 +29,4 @@ entries:
     urls:
     - https://github.com/sandipb/helm-charts/releases/download/cert-manager-ca-issuer-0.1.0/cert-manager-ca-issuer-0.1.0.tgz
     version: 0.1.0
-generated: "2021-11-01T23:43:12.926055897Z"
+generated: "2021-11-01T23:50:36.07806061Z"
