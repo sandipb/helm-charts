@@ -1,3 +1,5 @@
+name: Sync README
+
 on:
   workflow_run:
     workflows: ["Release Charts"]
