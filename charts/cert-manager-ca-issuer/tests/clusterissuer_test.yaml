@@ -1,0 +1,39 @@
+suite: test cluster-issuer
+templates:
+  - cluster-issuer.yaml
+tests:
+  - it: kind Issuer should create kind Issuer
+    set:
+      issuerKind: Issuer
+      issuerName: ca-issuer-one
+      issuerNamespace: some-namespace
+      issuerSecretName: some-secret
+    asserts:
+      - isKind:
+          of: Issuer
+      - equal:
+          path: metadata.name
+          value: ca-issuer-one
+      - equal:
+          path: metadata.namespace
+          value: some-namespace
+      - equal:
+          path: spec.ca.secretName
+          value: some-secret
+
+  - it: kind ClusterIssuer should create kind ClusterIssuer
+    set:
+      issuerKind: ClusterIssuer
+      issuerName: ca-issuer-one
+      issuerSecretName: some-secret
+    asserts:
+      - isKind:
+          of: ClusterIssuer
+      - equal:
+          path: metadata.name
+          value: ca-issuer-one
+      - isNull:
+          path: metadata.namespace
+      - equal:
+          path: spec.ca.secretName
+          value: some-secret

@@ -1,0 +1,6 @@
+===========================================================================
+| To enable TLS automation, make sure all ingresses have the annotation:
+|
+|    annotations:
+|        cert-manager.io/cluster-issuer: "{{ .Values.issuerName }}"
+===========================================================================

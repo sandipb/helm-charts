@@ -1,0 +1,9 @@
+issuerNamespace: cert-manager
+issuerKind: ClusterIssuer
+issuerName: ca-issuer
+
+issuerSecretName: k8s-local-ca-tls
+
+issuerTLSSecrets:
+  tls.cert: ""  # cert_in_one_line_without_armor
+  tls.key: ""   # key_in_one_line_without_armor

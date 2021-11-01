@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: {{ .Values.issuerKind }}
+metadata:
+  name: {{ .Values.issuerName }}
+{{- if (eq .Values.issuerKind "Issuer") }}
+  namespace: {{ .Values.issuerNamespace }}
+{{- end }}
+spec:
+  ca:
+    secretName: {{ .Values.issuerSecretName }}
+
