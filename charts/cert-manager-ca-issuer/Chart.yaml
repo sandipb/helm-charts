@@ -3,7 +3,7 @@ name: cert-manager-ca-issuer
 home: https://blog.sandipb.net
 description: A Helm chart for adding a custom CA issuer for cert-manager
 type: application
-version: 0.1.2
+version: 0.1.3
 appVersion: "1.6.0"
 maintainers:
   - name: Sandip Bhattacharya
