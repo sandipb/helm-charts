@@ -3,7 +3,7 @@ name: cert-manager-ca-issuer
 home: https://blog.sandipb.net
 description: A Helm chart for adding a custom CA issuer for cert-manager
 type: application
-version: 0.1.4
+version: 0.1.5
 appVersion: "1.6.0"
 
 # For artifacthub
@@ -21,8 +21,10 @@ annotations:
   artifacthub.io/license: Apache-2.0
   artifacthub.io/maintainers:
     - name: Sandip Bhattacharya
-        email: sandipb@showmethesource.org
+      email: sandipb@showmethesource.org
   artifacthub.io/changes: |
+    - kind: changed
+      description: Fix broken metadata
     - kind: added
       description: Added artifacthub annotations. Remove separate changelog. No code changes.
     - kind: added
