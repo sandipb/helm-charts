@@ -8,20 +8,21 @@ on:
     branches: [main]
     paths:
       - 'README.md'
+      - 'artifacthub-repo.yml '
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
-          cp -f README.md ${{ runner.temp }}/README.md
+          cp -f README.md artifacthub-repo.yml  ${{ runner.temp }}/
       - uses: actions/checkout@v2
         with:
           ref: gh-pages
       - run: |
-          cp -f ${{ runner.temp }}/README.md .
+          cp -f ${{ runner.temp }}/README.md ${{ runner.temp }}/artifacthub-repo.yml .
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git add README.md
+          git add README.md artifacthub-repo.yml 
           git commit --signoff -m "Sync README from main"
           git push
