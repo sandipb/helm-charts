@@ -1,28 +1,23 @@
 apiVersion: v2
 name: cert-manager-ca-issuer
-home: https://blog.sandipb.net
+home: https://github.com/sandipb/helm-charts
 description: A Helm chart for adding a custom CA issuer for cert-manager
 type: application
-version: 0.1.5
+version: 0.1.6
 appVersion: "1.6.0"
-
-# For artifacthub
 keywords:
   - kubernetes
   - helm
   - cert-manager
   - tls
-
 maintainers:
   - name: Sandip Bhattacharya
     email: sandipb@showmethesource.org
-
 annotations:
   artifacthub.io/license: Apache-2.0
-  artifacthub.io/maintainers:
-    - name: Sandip Bhattacharya
-      email: sandipb@showmethesource.org
   artifacthub.io/changes: |
+    - kind: changed
+      description: Fix broken metadata which was preventing helm from loading the chart
     - kind: changed
       description: Fix broken metadata
     - kind: added
